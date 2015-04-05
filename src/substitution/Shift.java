@@ -15,6 +15,7 @@ public class Shift extends MonoAlphabetic{
      * @return
      */
     public String cipher(int shift){
+        shift %= 26;
         this.setCipherText("");
         for (char letter : this.getText().toCharArray()){
             if (letter >= 'a' && letter <= 'z'){
@@ -30,6 +31,7 @@ public class Shift extends MonoAlphabetic{
     }
     
     public String decipher(int shift){
+        shift %= 26;
         this.setDecipherText(this.cipher(26 - shift));
         return this.getDecipherText();
     }
