@@ -1,5 +1,7 @@
 package substitution;
 
+import java.util.ArrayList;
+
 /**
  * This class allow to cipher/decipher texts with
  * the Polybius square algorithm.
@@ -12,6 +14,7 @@ public class PolybiusSquare extends MonoAlphabetic {
      */
     public PolybiusSquare(String text) {
         super(text);
+        this.setAlphabet(new ArrayList<String>());
         for (Integer line = 1; line <= 5; line++){
             for (Integer column = 1; column <= 5; column++){ 
                 this.getAlphabet().add(line + "" + column);
@@ -64,13 +67,5 @@ public class PolybiusSquare extends MonoAlphabetic {
         return this.getDecipherText();
     }
     
-    /**
-     * 
-     * @param text the text you input (not case sensitive)
-     */
-    @Override
-    protected void setText(String text){
-        super.setText(text.toLowerCase());
-    }
     
 }

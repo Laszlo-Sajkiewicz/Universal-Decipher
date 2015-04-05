@@ -20,13 +20,18 @@ public class MonoAlphabetic extends Substitution {
     public MonoAlphabetic(String text) {
         super(text);
         this.setAlphabet(new ArrayList<String>());
+        for (char letter : "abcdefghijklmnopqrstuvwxyz".toCharArray()){
+            this.getAlphabet().add(String.valueOf(letter));
+        }
     }
 
     /**
      * This method allow you to know the frequency
-     * of each 'letter' of your text
+     * of each 'letter' of your text.
+     * @return the frequency of each letter of the alphabet
      */
-    public void frequencyAnalysis(){
+    public String frequencyAnalysis(){
+        String message = "Frequency analysis : \n";
         HashMap<String, Integer> frequency = new HashMap<String, Integer>();
         for (char character : this.getText().toCharArray()){
             String ch = String.valueOf(character);
@@ -38,12 +43,12 @@ public class MonoAlphabetic extends Substitution {
                 frequency.put(ch, 1);
             }
         }
-        Iterator it = frequency.keySet().iterator();
-        while (it.hasNext()){
-           Object key = it.next();
-           Object value = frequency.get(key);
-           System.out.println(key + " : " + value);
+        for (String character : this.getAlphabet()){
+            if (frequency.containsKey(character)){
+                message += character + " : " + (float) frequency.get(character) / (float) this.getText().length() * 100.0f + " %\n";
+            } 
         }
+        return message;
     }
     
     /**
@@ -58,6 +63,20 @@ public class MonoAlphabetic extends Substitution {
      */
     protected void setAlphabet(ArrayList<String> alphabet) {
         this.alphabet = alphabet;
+    }
+    
+    /**
+     * 
+     * @param text the text you input (not case sensitive)
+     */
+    @Override
+    protected void setText(String text){
+        super.setText(text.toLowerCase());
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\n" + this.frequencyAnalysis();
     }
     
 }
