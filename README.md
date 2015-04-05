@@ -8,3 +8,4 @@ Algorithms that are currently working :
     - polyalphabetic :
       1. news to come
 
+N.B. : the project is written with netbeans 
