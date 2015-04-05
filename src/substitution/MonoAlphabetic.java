@@ -1,6 +1,8 @@
 package substitution;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * This class allow to cipher/decipher texts with
@@ -25,7 +27,23 @@ public class MonoAlphabetic extends Substitution {
      * of each 'letter' of your text
      */
     public void frequencyAnalysis(){
-        System.out.println("Not implemented yet");
+        HashMap<String, Integer> frequency = new HashMap<String, Integer>();
+        for (char character : this.getText().toCharArray()){
+            String ch = String.valueOf(character);
+            if (frequency.containsKey(ch)){
+                int newValue = frequency.get(ch) + 1;
+                frequency.remove(ch);
+                frequency.put(ch, newValue);
+            } else{
+                frequency.put(ch, 1);
+            }
+        }
+        Iterator it = frequency.keySet().iterator();
+        while (it.hasNext()){
+           Object key = it.next();
+           Object value = frequency.get(key);
+           System.out.println(key + " : " + value);
+        }
     }
     
     /**
