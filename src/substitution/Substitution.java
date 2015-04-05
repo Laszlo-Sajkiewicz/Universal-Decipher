@@ -1,7 +1,8 @@
 package substitution;
 
 /**
- *
+ * This class allow to cipher/decipher texts with
+ * subsitution's algorithms.
  */
 public class Substitution {
     
@@ -15,14 +16,22 @@ public class Substitution {
         this.setDecipherText("Undefined");
     }
     
+    /**
+     * 
+     * @return the ciphertext
+     */
     public String cipher(){
-        System.out.println("Cipher not implemented yet");
-        return this.getCipherText();
+        System.out.println("Cipher method not implemented yet");
+        return null;
     }
     
+    /**
+     * 
+     * @return the deciphertext
+     */
     public String decipher(){
-        System.out.println("Decipher not implemented yet");
-        return this.getDecipherText();
+        System.out.println("Decipher method not implemented yet");
+        return null;
     }
     
     /**

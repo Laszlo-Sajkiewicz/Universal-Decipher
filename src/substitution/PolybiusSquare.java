@@ -1,7 +1,8 @@
 package substitution;
 
 /**
- *
+ * This class allow to cipher/decipher texts with
+ * the Polybius square algorithm.
  */
 public class PolybiusSquare extends MonoAlphabetic {
 
