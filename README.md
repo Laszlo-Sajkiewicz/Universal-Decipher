@@ -6,6 +6,6 @@ Algorithms that are currently working :
       1. Shift (Cesar)
       2. Polybius square
     - polyalphabetic :
-      1. news to come
+      1. Vigenere
 
 N.B. : the project is written with netbeans 
