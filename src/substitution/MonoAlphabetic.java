@@ -2,7 +2,7 @@ package substitution;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+
 
 /**
  * This class allow to cipher/decipher texts with
