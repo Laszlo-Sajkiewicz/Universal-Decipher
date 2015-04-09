@@ -6,6 +6,7 @@ Algorithms that are currently working :
       1. Shift (Cesar)
       2. Polybius square
       3. Hexadecimal encoding
+      4. Binary encoding
     - polyalphabetic :
       1. Vigenere
 
