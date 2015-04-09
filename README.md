@@ -5,6 +5,7 @@ Algorithms that are currently working :
     - monoalphabetic :
       1. Shift (Cesar)
       2. Polybius square
+      3. Hexadecimal encoding
     - polyalphabetic :
       1. Vigenere
 
