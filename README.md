@@ -7,6 +7,7 @@ Algorithms that are currently working :
       2. Polybius square
       3. Hexadecimal encoding
       4. Binary encoding
+      5. RSA code 
     - polyalphabetic :
       1. Vigenere
 
