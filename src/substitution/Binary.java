@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package substitution;
 
-/**
- *
- * @author sajkiewl
- */
-public class Binary {
+public class Binary extends MonoAlphabetic {
+    /*
+    * This programm codes ascii strings or decodes binary strings
+    * The conversion included spaces and special character
+    */
+    public Binary(String text) {
+        super(text);
+    }
     public void code(String asciiValue) {
         char[] chars = asciiValue.toCharArray();
         StringBuilder bin = new StringBuilder();
