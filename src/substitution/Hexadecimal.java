@@ -1,5 +1,7 @@
 package substitution;
 
+import java.util.Scanner;
+
 public class Hexadecimal extends MonoAlphabetic {
     /*
      * This programme codes ascii string or decodes hexa strings
@@ -10,7 +12,7 @@ public class Hexadecimal extends MonoAlphabetic {
         super(text);
     }
 
-    public void code(String asciiValue) {
+    public static  void code(String asciiValue) {
         char[] chars = asciiValue.toCharArray(); // String becomes an array
         StringBuilder hex = new StringBuilder();
         for (int i = 0; i < chars.length; i++) {
@@ -20,7 +22,7 @@ public class Hexadecimal extends MonoAlphabetic {
         System.out.print(code); // show (string)code
     }
 
-    public void decode(String hexValue) {
+    public static  void decode(String hexValue) {
         //Inverse operation
         StringBuilder output = new StringBuilder("");
         for (int i = 0; i < hexValue.length(); i += 2) {
@@ -29,5 +31,26 @@ public class Hexadecimal extends MonoAlphabetic {
         }
         String ph = output.toString();
         System.out.print(ph);
+    }
+
+    public static void hexadecimal() {
+        System.out.println("To code or decode ?");
+        Scanner sc = new Scanner(System.in);
+        String ans = sc.nextLine();
+        switch (ans) {
+            case "code": {
+                System.out.println(" Enter your text");
+                String text = sc.nextLine();
+                code(text);
+
+                break;
+            }
+            case "decode": {
+                System.out.println(" Enter your text");
+                String text = sc.nextLine();
+                decode(text);
+                break;
+            }
+        }
     }
 }

@@ -52,12 +52,8 @@ public class UniversalDecipher {
                 shift.cipher(nb);
                 System.out.println(shift);
                 break;
-            case 3:
-                System.out.print("Please enter your text : ");
-                text = input.nextLine();
-                Hexadecimal hex = new Hexadecimal(text);
-                hex.code(text);
-                hex.decode(text);
+            case 3: // hexadecimal 
+               Hexadecimal.hexadecimal(); 
                 break;
                 case 4:
                 System.out.print("Please enter your text : ");
